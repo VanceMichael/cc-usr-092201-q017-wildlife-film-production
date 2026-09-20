@@ -1,0 +1,32 @@
+{
+  "domain": "wildlife-film-production",
+  "version": 1,
+  "sample_id": "092201-017",
+  "record_types": [
+    "事实访谈",
+    "剧本场次",
+    "人物授权",
+    "取景许可",
+    "拍摄素材",
+    "发布版本"
+  ],
+  "workflow_states": [
+    "资料核实",
+    "剧本审签",
+    "待拍摄",
+    "摄制中",
+    "剪辑中",
+    "已发布"
+  ],
+  "facts": [
+    "影片取材于受伤雪豹的真实救助经历",
+    "故事聚焦一线生态管护人员",
+    "摄制地点位于重要生态保护区域"
+  ],
+  "sample": {
+    "story_event": "雪豹康复观察样例",
+    "location_precision": "县级",
+    "permit": "ECO-FILM-026",
+    "release_scope": "海内外传播"
+  }
+}
