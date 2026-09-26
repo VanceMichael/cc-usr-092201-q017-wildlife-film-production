@@ -9,6 +9,14 @@
     "record_types",
     "workflow_states",
     "facts",
+    "roles",
+    "coordinate_levels",
+    "coordinate_rule",
+    "usage_constraints",
+    "traceability",
+    "daily_confirmation",
+    "change_triggers",
+    "release_checklist",
     "sample"
   ],
   "properties": {
@@ -17,7 +25,7 @@
     },
     "version": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 2
     },
     "sample_id": {
       "type": "string",
@@ -25,14 +33,14 @@
     },
     "record_types": {
       "type": "array",
-      "minItems": 3,
+      "minItems": 8,
       "items": {
         "type": "string"
       }
     },
     "workflow_states": {
       "type": "array",
-      "minItems": 3,
+      "minItems": 6,
       "items": {
         "type": "string"
       }
@@ -40,6 +48,117 @@
     "facts": {
       "type": "array",
       "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "duty",
+          "coordinate_access"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "duty": {
+            "type": "string",
+            "minLength": 1
+          },
+          "coordinate_access": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "coordinate_levels": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "coordinate_rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "usage_constraints": {
+      "type": "object",
+      "minProperties": 3
+    },
+    "traceability": {
+      "type": "object",
+      "minProperties": 2
+    },
+    "daily_confirmation": {
+      "type": "object",
+      "required": [
+        "record",
+        "timing",
+        "confirms"
+      ],
+      "properties": {
+        "record": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timing": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confirms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "derived_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "change_triggers": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "event",
+          "review"
+        ],
+        "properties": {
+          "event": {
+            "type": "string",
+            "minLength": 1
+          },
+          "review": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recheck": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "release_checklist": {
+      "type": "array",
+      "minItems": 3,
       "items": {
         "type": "string"
       }
