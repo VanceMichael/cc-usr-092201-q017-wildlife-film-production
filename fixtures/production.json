@@ -1,0 +1,210 @@
+{
+  "production": "凌小芒：受伤雪豹救助纪实（样例，全部虚构）",
+  "state": "剪辑中",
+  "persons": [
+    {
+      "person_id": "person-zhuoma",
+      "display_name": "卓玛",
+      "role_desc": "一线生态管护员（虚构人物）"
+    },
+    {
+      "person_id": "person-qiao",
+      "display_name": "乔远",
+      "role_desc": "野生动物救助站兽医（虚构人物）"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "src-int-001",
+      "kind": "访谈",
+      "title": "卓玛口述：巡护途中发现受伤雪豹",
+      "narrator_id": "person-zhuoma",
+      "recorded_at": "2026-03-12",
+      "claims": [
+        "2026年3月初巡护时发现左前肢受伤的雪豹幼崽",
+        "发现后立即上报并原地守护等待救助站接应"
+      ],
+      "verified": true,
+      "verifier": "资料核实组",
+      "verification_note": "与巡护日志及上报记录交叉核对一致"
+    },
+    {
+      "source_id": "src-arc-001",
+      "kind": "救助档案",
+      "title": "救助站接收、诊疗与放归记录摘要",
+      "narrator_id": null,
+      "recorded_at": "2026-03-15",
+      "claims": [
+        "雪豹“凌小芒”左前肢骨折，接收当日完成手术",
+        "康复期九十余天，分两阶段转运",
+        "放归当日上午于发现地附近放归"
+      ],
+      "verified": true,
+      "verifier": "资料核实组",
+      "verification_note": "档案编号与救助站台账一致"
+    },
+    {
+      "source_id": "src-int-002",
+      "kind": "访谈",
+      "title": "乔远讲述康复期观察",
+      "narrator_id": "person-qiao",
+      "recorded_at": "2026-05-20",
+      "claims": [
+        "康复期雪豹对人保持警惕，属正常表现"
+      ],
+      "verified": false
+    }
+  ],
+  "consents": [
+    {
+      "consent_id": "consent-zhuoma",
+      "person_id": "person-zhuoma",
+      "scopes": ["肖像使用", "姓名使用", "访谈引用", "经历改编"],
+      "granted_at": "2026-03-20"
+    },
+    {
+      "consent_id": "consent-qiao",
+      "person_id": "person-qiao",
+      "scopes": ["肖像使用", "姓名使用", "访谈引用", "经历改编"],
+      "granted_at": "2026-03-22"
+    }
+  ],
+  "areas": [
+    {
+      "area_id": "area-core",
+      "name": "云岭核心保护区（虚构）",
+      "public_precision": "县级",
+      "coordinates": "35.4412, 96.8831"
+    },
+    {
+      "area_id": "area-buffer",
+      "name": "云岭缓冲带（虚构）",
+      "public_precision": "县级"
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "eco-core-2026",
+      "area_id": "area-core",
+      "approved": true,
+      "conditions": [
+        "不投喂野生动物",
+        "不接近巢穴与幼崽",
+        "夜间禁止强光照明",
+        "单次停留不超过三小时"
+      ],
+      "valid_from": "2026-04-01",
+      "valid_to": "2026-10-31"
+    },
+    {
+      "assessment_id": "eco-buffer-2026",
+      "area_id": "area-buffer",
+      "approved": true,
+      "conditions": [
+        "不投喂野生动物",
+        "车辆沿既有道路行驶"
+      ],
+      "valid_from": "2026-04-01",
+      "valid_to": "2026-10-31"
+    }
+  ],
+  "permits": [
+    {
+      "permit_id": "ECO-FILM-026",
+      "area_id": "area-core",
+      "valid_from": "2026-05-01",
+      "valid_to": "2026-09-30",
+      "allowed_behaviors": ["徒步跟拍", "定点隐蔽拍摄"],
+      "forbidden_behaviors": ["无人机航拍", "夜间强光拍摄", "投喂引诱"]
+    },
+    {
+      "permit_id": "ECO-FILM-027",
+      "area_id": "area-buffer",
+      "valid_from": "2026-05-01",
+      "valid_to": "2026-09-30",
+      "allowed_behaviors": ["车载拍摄", "定点隐蔽拍摄"],
+      "forbidden_behaviors": ["无人机航拍", "投喂引诱"]
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "sc-01",
+      "title": "巡护发现",
+      "summary": "卓玛巡护途中发现左前肢受伤的雪豹幼崽并上报。",
+      "source_ids": ["src-int-001", "src-arc-001"],
+      "adaptation": "史实还原",
+      "key_plot": true,
+      "person_ids": ["person-zhuoma"],
+      "review": "通过"
+    },
+    {
+      "scene_id": "sc-02",
+      "title": "连夜转运",
+      "summary": "受伤雪豹连夜转运至救助站接受手术。",
+      "source_ids": ["src-arc-001"],
+      "adaptation": "细节改编",
+      "adaptation_note": "将档案中的两阶段转运合并为一次呈现，诊疗经过不变。",
+      "key_plot": true,
+      "person_ids": ["person-zhuoma", "person-qiao"],
+      "review": "通过"
+    },
+    {
+      "scene_id": "sc-03",
+      "title": "康复期观察",
+      "summary": "乔远记录康复期雪豹的警惕行为。",
+      "source_ids": ["src-int-002"],
+      "adaptation": "史实还原",
+      "key_plot": false,
+      "person_ids": ["person-qiao"],
+      "review": "待审"
+    },
+    {
+      "scene_id": "sc-04",
+      "title": "放归回望",
+      "summary": "放归当日，雪豹转身回望管护员后离去。",
+      "source_ids": [],
+      "adaptation": "情节虚构",
+      "adaptation_note": "“回望”为艺术加工情节，无史实依据，成片须以字幕标明。",
+      "key_plot": false,
+      "person_ids": ["person-zhuoma"],
+      "review": "通过"
+    }
+  ],
+  "footage": [
+    {
+      "footage_id": "ft-001",
+      "scene_id": "sc-01",
+      "shot_at": "2026-06-10",
+      "area_id": "area-core",
+      "permit_id": "ECO-FILM-026",
+      "person_ids": ["person-zhuoma"]
+    },
+    {
+      "footage_id": "ft-002",
+      "scene_id": "sc-02",
+      "shot_at": "2026-06-12",
+      "area_id": "area-core",
+      "permit_id": "ECO-FILM-026",
+      "person_ids": ["person-zhuoma", "person-qiao"]
+    },
+    {
+      "footage_id": "ft-003",
+      "scene_id": "sc-04",
+      "shot_at": "2026-06-20",
+      "area_id": "area-buffer",
+      "permit_id": "ECO-FILM-027",
+      "person_ids": ["person-zhuoma"],
+      "contains_precise_location": true
+    }
+  ],
+  "releases": [
+    {
+      "release_id": "rel-v1",
+      "title": "凌小芒（样片）",
+      "scene_ids": ["sc-01", "sc-02", "sc-04"],
+      "footage_ids": ["ft-001", "ft-002"],
+      "locales": ["zh-CN", "en"],
+      "narration_text": "在青藏高原某县，管护员发现了受伤的雪豹凌小芒。"
+    }
+  ]
+}
